@@ -15,13 +15,9 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.jsx$/,
+      test: /\.(jsx|js)$/,
       exclude: /node_modules/,
       loader: 'jsx-loader?harmony!babel?stage=0&ignore=buffer'
-    }, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel?stage=0&ignore=buffer'
     }, {
       test: /\.scss$/,
       loader: 'style!css!sass'

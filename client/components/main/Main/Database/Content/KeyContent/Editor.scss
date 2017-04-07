@@ -1,13 +1,15 @@
 .Editor {
-  position: relative;
-  textarea {
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .ReactCodeMirror {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
   .CodeMirror {
-    height: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -18,49 +20,35 @@
     flex: 1;
   }
 
-  .ReactCodeMirror {
-    position: relative;
-    flex: 1;
-    display: flex;
-    width: 100%;
-    overflow-y: auto;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 45px;
-      z-index: 1;
-      background: #f7f7f7;
-      border-right: 1px solid #ddd;
-      height: 100%;
-    }
+  .viewerContainer {
+      flex: 1;
+      display: flex;
+      overflow-y: scroll;
   }
 
-  .operation-pannel {
-    z-index: 99;
+  .operation-panel {
+      flex: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #eee;
+      border-top: 1px solid #ccc;
+      padding: 5px 10px;
   }
 
-  .mode-selector {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  .left-container {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
   }
 
-  .wrap-selector {
-    position: absolute;
-    bottom: 5px;
-    right: 120px;
-    span {
-      margin-left: 4px;
-    }
-  }
+  .checkbox-container {
+      margin: 0;
+      margin-right: 15px;
 
-  button {
-    position: absolute;
-    bottom: 10px;
-    left: 54px;
-    z-index: 99;
+      span {
+          margin-left: 5px;
+      }
   }
 }
