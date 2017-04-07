@@ -114,7 +114,7 @@ function _encodeMessagePack(buffer) {
         const encoded = msgpack.encode(obj);
         return Promise.resolve(encoded);
     } catch(err) {
-        return Promise.reject("The content must be valid JSON to encode as MessagePack.")
+        return Promise.reject(new Error("The content must be valid JSON to encode as MessagePack."))
     }
 }
 

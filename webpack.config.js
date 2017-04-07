@@ -41,6 +41,7 @@ module.exports = {
     'ipc': 'require("ipc")',
     'fs': 'require("fs")',
     'buffer': 'require("buffer")',
+    'zlib': 'require("zlib")',
     'system': '{}',
     'file': '{}'
   },
