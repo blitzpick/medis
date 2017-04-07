@@ -10,6 +10,9 @@ require('codemirror/addon/lint/lint');
 require('codemirror/addon/selection/active-line');
 require('codemirror/addon/edit/closebrackets');
 require('codemirror/addon/edit/matchbrackets');
+require('codemirror/addon/fold/brace-fold');
+require('codemirror/addon/fold/foldcode');
+require('codemirror/addon/fold/foldgutter');
 require('codemirror/addon/search/search');
 require('codemirror/addon/search/searchcursor');
 require('codemirror/addon/search/jump-to-line');
@@ -19,6 +22,7 @@ import jsonlint from 'jsonlint';
 window.jsonlint = jsonlint.parser;
 require('codemirror/lib/codemirror.css');
 require('codemirror/addon/lint/lint.css');
+require('codemirror/addon/fold/foldgutter.css');
 
 require('./Editor.scss');
 
@@ -156,7 +160,7 @@ class Editor extends React.Component {
           mode: 'none',
           styleActiveLine: true,
           lineWrapping: this.state.wrapping,
-          gutters: ['CodeMirror-lint-markers'],
+          gutters: ['CodeMirror-lint-markers', 'CodeMirror-foldgutter'],
           lineNumbers: true
       };
 
@@ -179,6 +183,7 @@ class Editor extends React.Component {
               json: true
           },
           tabSize: 2,
+          foldGutter: true,
           indentWithTabs: true,
           autoCloseBrackets: true,
           matchTags: true,
