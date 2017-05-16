@@ -1,6 +1,10 @@
 @import "photon";
 @import "native";
 
+html {
+  background: #ececec;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -38,6 +42,7 @@ textarea {
 .Pane.vertical {
   height: 100%;
   display: flex;
+  min-width: 0;
 }
 
 .fixedDataTableCellLayout_columnResizerContainer {
