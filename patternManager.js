@@ -60,7 +60,7 @@
 
 	var _reactRedux = __webpack_require__(184);
 
-	var _ = __webpack_require__(595);
+	var _ = __webpack_require__(602);
 
 	var _2 = _interopRequireDefault(_);
 
@@ -74,7 +74,7 @@
 
 	var _electron = __webpack_require__(253);
 
-	__webpack_require__(593);
+	__webpack_require__(600);
 
 	_electron.ipcRenderer.on('action', function (evt, action) {
 	  if (type === 'delInstance') {
@@ -46710,13 +46710,20 @@
 /* 590 */,
 /* 591 */,
 /* 592 */,
-/* 593 */
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(594);
+	var content = __webpack_require__(601);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(243)(content, {});
@@ -46736,7 +46743,7 @@
 	}
 
 /***/ }),
-/* 594 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(242)();
@@ -46750,7 +46757,7 @@
 
 
 /***/ }),
-/* 595 */
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46785,7 +46792,7 @@
 
 	var _immutable = __webpack_require__(358);
 
-	__webpack_require__(596);
+	__webpack_require__(603);
 
 	var connectionKey = getParameterByName('arg');
 
@@ -46958,13 +46965,13 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 596 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(597);
+	var content = __webpack_require__(604);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(243)(content, {});
@@ -46984,7 +46991,7 @@
 	}
 
 /***/ }),
-/* 597 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(242)();

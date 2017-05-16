@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import _ from "lodash"
 import BaseContent from './BaseContent'
 import SplitPane from 'react-split-pane'
 import {Table, Column} from 'fixed-data-table-contextmenu'
@@ -30,10 +31,11 @@ class HashContent extends BaseContent {
       return
     }
     const count = Number(this.cursor) ? 10000 : 500
-    this.props.redis.hscanBuffer(this.state.keyName, this.cursor, 'MATCH', '*', 'COUNT', count, (_, [cursor, result]) => {
+    this.props.redis.hscanBuffer(this.state.keyName, this.cursor, 'MATCH', '*', 'COUNT', count, (_err, [cursor, result]) => {
       for (let i = 0; i < result.length - 1; i += 2) {
         this.state.members.push([result[i].toString(), result[i + 1]])
       }
+      this.state.members = _.sortBy(this.state.members, "0");
       this.cursor = cursor
       this.setState({members: this.state.members}, () => {
         if (typeof this.state.selectedIndex !== 'number' && this.state.members.length) {

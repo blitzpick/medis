@@ -1,64 +1,54 @@
 .Editor {
-  position: relative;
-  min-width: 0;
-  textarea {
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .ReactCodeMirror {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
   .CodeMirror {
-    height: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
     font-family: Consolas, monospace;
   }
 
-  .ReactCodeMirror {
-    position: relative;
+  .CodeMirror-scroll {
     flex: 1;
-    display: flex;
-    width: 100%;
-    overflow-y: auto;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 45px;
-      z-index: 1;
-      background: #f7f7f7;
-      border-right: 1px solid #ddd;
-      height: 100%;
-    }
   }
 
-  .operation-pannel {
-    z-index: 99;
+  .viewerContainer {
+      flex: 1;
+      display: flex;
+      overflow-y: scroll;
   }
 
-  .mode-selector {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  .operation-panel {
+      flex: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #eee;
+      border-top: 1px solid #ccc;
+      padding: 10px 25px;
   }
 
-  .wrap-selector {
-    position: absolute;
-    bottom: 5px;
-    right: 120px;
-    padding: 0 10px;
-    span {
-      margin-left: 4px;
-    }
+  .left-container {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
   }
 
-  button {
-    position: absolute;
-    bottom: 10px;
-    left: 54px;
-    z-index: 99;
+  .checkbox-container {
+      margin: 0;
+      margin-right: 15px;
+
+      span {
+          margin-left: 5px;
+      }
   }
 }
