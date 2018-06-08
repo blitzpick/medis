@@ -22,23 +22,28 @@ It also supports many advanced features:
 
 **Note**: Medis only supports Redis >= 2.8 version because `SCAN` command was introduced since 2.8. `SCAN` is very useful to get key list without blocking the server, which is crucial to the production environment. Because the latest stable is 3.0 and 2.6 is a very old version, Medis doesn't support it.
 
-## Download Medis
+## Download Medis on Windows
 
-You can download compiled versions of Medis for Mac OS X from [the release page](https://github.com/luin/medis/releases). Support for Windows and Linux is coming soon.
+You can download compiled installer of Medis for Windows from the below page
+[download page](https://github.com/classfellow/medis/releases/tag/win)
+
+## Download Medis on Mac
+
+You can download compiled versions of Medis for Mac OS X from [the release page](https://github.com/luin/medis/releases).
 
 ## Running Locally
 
-```shell
-$ npm install
-$ npm run dev
-```
+1. Install dependencies
 
-## Build Medis
+    $ npm install
 
-```shell
-$ npm install
-$ npm run deploy
-```
+2. Compile assets:
+
+    $ npm run build
+
+3. Run with Electron:
+
+    $ npm run electron
 
 ## Connect to Heroku
 Medis can connect to Heroku Redis addon to manage your data. You just need to call `heroku redis:credentials --app APP` to get your redis credential:
@@ -64,6 +69,9 @@ And then input `HOST`, `PORT` and `PASSWORD` to the connection tab.
 * Lua script editor
 * Cluster management
 * GEO keys supporting
+
+## Contributors
+<table><tr><td width="20%"><a href="https://github.com/luin"><img src="https://avatars1.githubusercontent.com/u/635902?v=3" /></a><p align="center">luin</p></td><td width="20%"><a href="https://github.com/kvnsmth"><img src="https://avatars0.githubusercontent.com/u/127?v=3" /></a><p align="center">kvnsmth</p></td><td width="20%"><a href="https://github.com/dpde"><img src="https://avatars2.githubusercontent.com/u/485645?v=3" /></a><p align="center">dpde</p></td><td width="20%"><a href="https://github.com/ogasawaraShinnosuke"><img src="https://avatars1.githubusercontent.com/u/5368888?v=3" /></a><p align="center">ogasawaraShinnosuke</p></td><td width="20%"><a href="https://github.com/naholyr"><img src="https://avatars1.githubusercontent.com/u/214067?v=3" /></a><p align="center">naholyr</p></td></tr><tr><td width="20%"><a href="https://github.com/hlobil"><img src="https://avatars2.githubusercontent.com/u/484499?v=3" /></a><p align="center">hlobil</p></td><td width="20%"><a href="https://github.com/Janpot"><img src="https://avatars1.githubusercontent.com/u/2109932?v=3" /></a><p align="center">Janpot</p></td></table>
 
 ## License
 
